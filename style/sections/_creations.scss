@@ -1,0 +1,79 @@
+.creations {
+    min-height: 800px;
+    height: auto;
+    margin-bottom: 12.5em;
+    position: relative;
+
+    &__wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 100%;
+
+        &--header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: 0.5rem;
+            }
+
+            button {
+                padding: 0.5em 1em;
+                background: $white;
+                border: 2px solid $black;
+                width: 120px;
+                color: $black;
+                letter-spacing: 0.1rem;
+                font-size: 0.8rem;
+                cursor: pointer;
+
+                &:hover {
+                    background: $black;
+                    color: $white;
+                }
+            }
+        }
+
+        .creations--grid {
+            margin-top: 5rem;
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+            gap: 2rem;
+            height: 100%;
+
+            .grid--item {
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+                    img {
+                        opacity: 0.5;
+                    }
+
+                    h3 {
+                        color: $black;
+                    }
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                h3 {
+                    color: $white;
+                    position: absolute;
+                    font-size: 2rem;
+                    bottom: 0;
+                    letter-spacing: 0.5rem;
+                    line-height: 2.2rem;
+                    background: linear-gradient(180deg, transparent, $black);
+                    width: 100%;
+                    padding: 0.5em;
+                }
+            }
+        }
+    }
+}
